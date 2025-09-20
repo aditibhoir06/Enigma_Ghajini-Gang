@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Government Services Helper - Rural India</title>
+    <meta name="description" content="Find government schemes, get financial advice, and review public services. Made for rural and economically disadvantaged users in India." />
+    <meta name="author" content="Government Services Helper" />
+
+    <meta property="og:title" content="9f94b293-6038-4888-91d4-ce0732b07813" />
+    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:type" content="website" />
+
+    <style>
+      /* Hide Google's blue banner and reset body offset */
+      .goog-te-banner-frame.skiptranslate { display: none !important; }
+      .goog-te-banner-frame { display: none !important; }
+      body { top: 0 !important; }
+
+      /* Hide tooltip balloon */
+      #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
+
+      /* Pin the dropdown in the top-right corner */
+      #google_translate_element {
+        position: fixed;
+        top: 10px;
+        right: 16px;
+        z-index: 99999;
+      }
+
+      /* Style the select box */
+      .goog-te-gadget { font-family: inherit !important; font-size: 0 !important; }
+      .goog-te-gadget .goog-te-combo {
+        font-size: 14px !important;
+        padding: 4px 8px !important;
+        border: 1px solid #e5e7eb !important;
+        border-radius: 6px !important;
+        background: #fff !important;
+        color: #111827 !important;
+        outline: none !important;
+      }
+      .goog-te-gadget .goog-te-combo:focus {
+        box-shadow: 0 0 0 2px rgba(59,130,246,.3) !important;
+      }
+      .goog-te-gadget img { display: none !important; }
+
+      /* Keep the dropdown menu always above */
+      .goog-te-menu-frame { z-index: 1000000 !important; }
+    </style>
+  </head>
+
+  <body>
+    <!-- Google Translate dropdown -->
+    <div id="google_translate_element"></div>
+
+    <!-- React app root -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Google Translate init -->
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: 'en',
+            includedLanguages: 'en,hi,mr,bn,ta,te,kn,gu,ur',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+          },
+          'google_translate_element'
+        );
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Suppress banner reinjection -->
+    <script>
+      (function suppressGTranslateBar() {
+        const hideBar = () => {
+          document.querySelectorAll('.goog-te-banner-frame').forEach(n => n.remove());
+          if (document.body && getComputedStyle(document.body).top !== '0px') {
+            document.body.style.top = '0px';
+          }
+        };
+        window.addEventListener('load', () => setTimeout(hideBar, 200));
+        const mo = new MutationObserver(hideBar);
+        mo.observe(document.documentElement, { childList: true, subtree: true, attributes: true });
+      })();
+    </script>
+  </body>
+</html>
